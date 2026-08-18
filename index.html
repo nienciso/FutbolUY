@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Futbol UY | Fútbol Uruguayo</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container">
+
+                <a
+                    class="navbar-brand fw-bold"
+                    href="#inicio">
+
+                    <i class="bi bi-dribbble"></i>
+                    Futbol UY
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="#inicio">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#jugadores">
+                                Jugadores
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#clubes">
+                                Clubes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#partidos">
+                                Partidos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="#pruebas">
+                                Próximas pruebas
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <section
+        id="inicio"
+        class="hero-principal">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="hero-etiqueta">
+                        FÚTBOL URUGUAYO
+                    </span>
+
+                    <h1>
+                        Descubrí jugadores,
+                        clubes y partidos
+                        de Uruguay
+                    </h1>
+
+                    <p>
+                        Una plataforma para explorar talento,
+                        conocer clubes y seguir la actividad
+                        del fútbol uruguayo.
+                    </p>
+
+                    <div class="buscador-jugadores">
+
+                        <i class="bi bi-search"></i>
+
+                        <input
+                            type="text"
+                            id="buscador"
+                            placeholder="Buscar jugador por nombre..."
+                            autocomplete="off">
+
+                        <button
+                            type="button"
+                            id="btnBuscar">
+                            Buscar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="seccion-filtros">
+
+        <div class="container">
+
+            <div class="row g-3">
+
+                <div class="col-md-4">
+
+                    <label for="filtroPosicion">
+                        Posición
+                    </label>
+
+                    <select
+                        id="filtroPosicion"
+                        class="form-select">
+
+                        <option value="todos">
+                            Todas las posiciones
+                        </option>
+
+                        <option value="Arquero">
+                            Arquero
+                        </option>
+
+                        <option value="Defensa">
+                            Defensa
+                        </option>
+
+                        <option value="Mediocampista">
+                            Mediocampista
+                        </option>
+
+                        <option value="Delantero">
+                            Delantero
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <label for="filtroDepartamento">
+                        Departamento
+                    </label>
+
+                    <select
+                        id="filtroDepartamento"
+                        class="form-select">
+
+                        <option value="todos">
+                            Todo Uruguay
+                        </option>
+
+                        <option value="Montevideo">
+                            Montevideo
+                        </option>
+
+                        <option value="Canelones">
+                            Canelones
+                        </option>
+
+                        <option value="Maldonado">
+                            Maldonado
+                        </option>
+
+                        <option value="San José">
+                            San José
+                        </option>
+
+                        <option value="Salto">
+                            Salto
+                        </option>
+
+                        <option value="Paysandú">
+                            Paysandú
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <label for="ordenar">
+                        Ordenar por
+                    </label>
+
+                    <select
+                        id="ordenar"
+                        class="form-select">
+
+                        <option value="relevantes">
+                            Más relevantes
+                        </option>
+
+                        <option value="jovenes">
+                            Más jóvenes
+                        </option>
+
+                        <option value="goles">
+                            Más goles
+                        </option>
+
+                        <option value="valorMayor">
+                            Mayor valor
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <main>
+
+        <section
+            id="jugadores"
+            class="seccion-jugadores">
+
+            <div class="container">
+
+                <div class="encabezado-seccion">
+
+                    <div>
+
+                        <span class="subtitulo">
+                            TALENTO URUGUAYO
+                        </span>
+
+                        <h2>
+                            Jugadores disponibles
+                        </h2>
+
+                        <p>
+                            Explorá perfiles de jugadores
+                            del fútbol uruguayo.
+                        </p>
+
+                    </div>
+
+                    <span
+                        class="contador"
+                        id="cantidadJugadores">
+                        0 jugadores
+                    </span>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="contenedorJugadores">
+                </div>
+
+                <div
+                    id="sinResultados"
+                    class="text-center py-5 d-none">
+
+                    <i class="bi bi-search fs-2"></i>
+
+                    <h3 class="mt-3">
+                        No encontramos jugadores
+                    </h3>
+
+                    <p class="text-secondary">
+                        Probá modificando
+                        la búsqueda o los filtros.
+                    </p>
+
+                </div>
+
+                <div
+                    id="paginacionJugadores"
+                    class="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-5">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="clubes"
+            class="seccion-clubes">
+
+            <div class="container">
+
+                <div class="encabezado-seccion">
+
+                    <div>
+
+                        <span class="subtitulo">
+                            CLUBES
+                        </span>
+
+                        <h2>
+                            Clubes disponibles
+                        </h2>
+
+                        <p>
+                            Explorá clubes
+                            del fútbol uruguayo.
+                        </p>
+
+                    </div>
+
+                    <span
+                        class="contador"
+                        id="cantidadClubes">
+                        0 clubes
+                    </span>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="contenedorClubes">
+                </div>
+
+                <div
+                    id="paginacionClubes"
+                    class="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-5">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="partidos"
+            class="seccion-partidos">
+
+            <div class="container">
+
+                <div class="encabezado-calendario">
+
+                    <div>
+
+                        <span class="subtitulo">
+                            AGENDA
+                        </span>
+
+                        <h2>
+                            Tablilla de partidos
+                        </h2>
+
+                        <p>
+                            Próximos encuentros
+                            de la semana.
+                        </p>
+
+                    </div>
+
+                    <div class="controles-calendario">
+
+                        <button
+                            type="button"
+                            id="semanaAnterior"
+                            aria-label="Semana anterior">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+                        <span id="mesCalendario">
+                            Agosto 2026
+                        </span>
+
+                        <button
+                            type="button"
+                            id="semanaSiguiente"
+                            aria-label="Semana siguiente">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="calendario-wrapper">
+
+                    <div
+                        class="calendario-semanal"
+                        id="calendarioPartidos">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            id="pruebas"
+            class="seccion-pruebas">
+
+            <div class="container">
+
+                <div class="encabezado-seccion">
+
+                    <div>
+
+                        <span class="subtitulo">
+                            OPORTUNIDADES
+                        </span>
+
+                        <h2>
+                            Próximas pruebas
+                        </h2>
+
+                        <p>
+                            Seguí a los clubes que te interesan
+                            y recibí un aviso cuando confirmen
+                            una nueva jornada de pruebas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="contenedorPruebas">
+                </div>
+
+                <div
+                    id="paginacionPruebas"
+                    class="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-5">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer-principal">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <h4>
+                        Futbol UY
+                    </h4>
+
+                    <p>
+                        Jugadores, clubes y partidos
+                        del fútbol uruguayo.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 text-md-end">
+
+                    <p>
+                        © 2026 Futbol UY
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script src="js/datos.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+.perfil-principal {
+    padding: 55px 0 80px;
+    background-color: #f5f7f6;
+}
+
+.volver-jugadores {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #555d58;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+    transition: 0.2s ease;
+}
+
+.volver-jugadores:hover {
+    color: #3ca947;
+}
+
+.perfil-imagen-principal {
+    position: relative;
+    height: 570px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #dfe4e1;
+    box-shadow:
+        0 20px 50px rgba(20, 30, 24, 0.12);
+}
+
+.perfil-imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.perfil-posicion {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    background-color: #65d46e;
+    color: #0b160d;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.perfil-etiqueta {
+    display: inline-block;
+    color: #47ad51;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+}
+
+.perfil-principal h1 {
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.perfil-resumen {
+    color: #707773;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.perfil-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #111614;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.perfil-estadisticas div {
+    text-align: center;
+    padding: 22px 12px;
+}
+
+.perfil-estadisticas div:not(:last-child) {
+    border-right:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+.perfil-estadisticas strong {
+    display: block;
+    font-size: 1.5rem;
+    color: #65d46e;
+    margin-bottom: 4px;
+}
+
+.perfil-estadisticas span {
+    color: #adb5b0;
+    font-size: 0.75rem;
+}
+
+.datos-jugador {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background-color: #e1e6e2;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e1e6e2;
+    margin-bottom: 24px;
+}
+
+.dato-perfil {
+    background-color: white;
+    padding: 18px 20px;
+}
+
+.dato-perfil span {
+    display: block;
+    color: #8b918d;
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+}
+
+.dato-perfil strong {
+    font-size: 0.95rem;
+}
+
+.perfil-valor {
+    background-color: #edf8ee;
+    border: 1px solid #d8ead9;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.perfil-valor span {
+    display: block;
+    color: #6d766f;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.perfil-valor strong {
+    font-size: 1.7rem;
+    color: #253229;
+}
+
+.encabezado-perfil-seccion {
+    margin-bottom: 40px;
+}
+
+.encabezado-perfil-seccion h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.encabezado-perfil-seccion p {
+    margin: 0;
+    color: #777d79;
+    max-width: 700px;
+}
+
+.seccion-trayectoria {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.trayectoria-lista {
+    max-width: 1000px;
+    margin-top: 40px;
+}
+
+.trayectoria-item {
+    display: grid;
+    grid-template-columns: 40px 155px 1fr;
+    position: relative;
+    min-height: 140px;
+}
+
+.trayectoria-linea {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.trayectoria-punto {
+    width: 14px;
+    height: 14px;
+    margin-top: 8px;
+    background-color: #65d46e;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow:
+        0 0 0 2px #65d46e;
+    position: relative;
+    z-index: 2;
+}
+
+.trayectoria-conector {
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    width: 2px;
+    background-color: #dfe5e0;
+}
+
+.trayectoria-periodo {
+    padding-top: 3px;
+    color: #777f7a;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.trayectoria-contenido {
+    background-color: #f7f9f7;
+    border: 1px solid #e3e8e4;
+    border-radius: 14px;
+    padding: 21px 24px;
+    margin-bottom: 28px;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.trayectoria-contenido:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(20, 30, 24, 0.08);
+}
+
+.trayectoria-contenido h3 {
+    font-size: 1.18rem;
+    font-weight: 800;
+    margin-bottom: 13px;
+}
+
+.trayectoria-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.trayectoria-datos span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #676f6a;
+    font-size: 0.84rem;
+}
+
+.trayectoria-datos i {
+    color: #49ad53;
+    font-size: 0.95rem;
+}
+
+.seccion-galeria {
+    padding: 80px 0;
+    background-color: #eef2ef;
+}
+
+.galeria-item {
+    height: 310px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #dfe4e1;
+    box-shadow:
+        0 8px 25px rgba(20, 30, 24, 0.06);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+.seccion-videos {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.video-card {
+    overflow: hidden;
+    background-color: #111614;
+    border-radius: 16px;
+    border: 1px solid #222924;
+}
+
+.video-card video {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    background-color: #000;
+}
+
+.video-info {
+    padding: 18px 20px;
+}
+
+.video-info h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.videos-vacios {
+    background-color: #f7f9f7;
+    border: 1px solid #e2e7e3;
+    border-radius: 16px;
+    text-align: center;
+    padding: 55px 25px;
+}
+
+.videos-vacios i {
+    color: #4ead57;
+    font-size: 2.6rem;
+}
+
+.videos-vacios h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 16px;
+    margin-bottom: 7px;
+}
+
+.videos-vacios p {
+    color: #7b827e;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+
+    .perfil-imagen-principal {
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .perfil-principal h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .perfil-estadisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .perfil-estadisticas div:nth-child(2) {
+        border-right: none;
+    }
+
+    .perfil-estadisticas div:nth-child(1),
+    .perfil-estadisticas div:nth-child(2) {
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .trayectoria-item {
+        grid-template-columns: 32px 1fr;
+    }
+
+    .trayectoria-linea {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .trayectoria-periodo {
+        grid-column: 2;
+        padding-top: 0;
+        margin-bottom: 9px;
+    }
+
+    .trayectoria-contenido {
+        grid-column: 2;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .perfil-principal {
+        padding: 35px 0 55px;
+    }
+
+    .perfil-imagen-principal {
+        height: 410px;
+    }
+
+    .datos-jugador {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-trayectoria,
+    .seccion-galeria,
+    .seccion-videos {
+        padding: 55px 0;
+    }
+
+    .encabezado-perfil-seccion h2 {
+        font-size: 1.8rem;
+    }
+
+    .trayectoria-contenido {
+        padding: 18px;
+    }
+
+    .trayectoria-datos {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .galeria-item {
+        height: 280px;
+    }
+
+    .video-card video {
+        height: 240px;
+    }
+
+}

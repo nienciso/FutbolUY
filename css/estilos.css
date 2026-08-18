@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7f6;
+    color: #171a18;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+.navbar {
+    background-color: #101412;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand i {
+    color: #65d46e;
+    margin-right: 7px;
+}
+
+.navbar-nav {
+    gap: 12px;
+}
+
+.navbar .nav-link {
+    color: #c8cdca;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #65d46e !important;
+}
+
+.hero-principal {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 12, 9, 0.96) 0%,
+            rgba(7, 12, 9, 0.88) 48%,
+            rgba(7, 12, 9, 0.55) 100%
+        ),
+        url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-etiqueta,
+.subtitulo {
+    display: inline-block;
+    color: #65d46e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+}
+
+.hero-principal h1 {
+    max-width: 760px;
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.hero-principal p {
+    max-width: 640px;
+    color: #c7ceca;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.buscador-jugadores {
+    max-width: 650px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buscador-jugadores i {
+    margin-left: 10px;
+    color: #737a76;
+    font-size: 1.05rem;
+}
+
+.buscador-jugadores input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 5px;
+    font-size: 0.95rem;
+}
+
+.buscador-jugadores button {
+    border: none;
+    border-radius: 8px;
+    background-color: #65d46e;
+    color: #071009;
+    padding: 13px 24px;
+    font-weight: 800;
+    transition: 0.25s ease;
+}
+
+.buscador-jugadores button:hover {
+    background-color: #78e580;
+}
+
+.seccion-filtros {
+    background-color: white;
+    border-bottom: 1px solid #e4e8e5;
+    padding: 30px 0;
+}
+
+.seccion-filtros label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #575d59;
+}
+
+.seccion-filtros .form-select {
+    min-height: 48px;
+    border-radius: 9px;
+    border: 1px solid #dfe4e1;
+    box-shadow: none;
+}
+
+.seccion-filtros .form-select:focus {
+    border-color: #65d46e;
+    box-shadow:
+        0 0 0 3px rgba(101, 212, 110, 0.14);
+}
+
+.seccion-jugadores,
+.seccion-clubes,
+.seccion-partidos,
+.seccion-pruebas {
+    padding: 80px 0;
+}
+
+.seccion-jugadores {
+    background-color: #f5f7f6;
+}
+
+.seccion-clubes {
+    background-color: #ffffff;
+}
+
+.seccion-partidos {
+    background-color: #eef2ef;
+}
+
+.seccion-pruebas {
+    background-color: #ffffff;
+}
+
+.encabezado-seccion,
+.encabezado-calendario {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.encabezado-seccion h2,
+.encabezado-calendario h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 7px;
+}
+
+.encabezado-seccion p,
+.encabezado-calendario p {
+    color: #777d79;
+    margin: 0;
+}
+
+.contador {
+    background-color: #e8ece9;
+    color: #383e3a;
+    padding: 9px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.jugador-card {
+    height: 100%;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e7ebe8;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.jugador-card:hover {
+    transform: translateY(-7px);
+    box-shadow:
+        0 18px 40px rgba(20, 30, 24, 0.12);
+}
+
+.jugador-imagen {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: #dfe4e1;
+}
+
+.jugador-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.jugador-card:hover .jugador-imagen img {
+    transform: scale(1.04);
+}
+
+.jugador-posicion {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    background-color: #65d46e;
+    color: #0b160d;
+    padding: 7px 13px;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.boton-favorito {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.boton-favorito:hover {
+    transform: scale(1.08);
+    background-color: white;
+}
+
+.jugador-info {
+    padding: 24px;
+}
+
+.jugador-info h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.jugador-datos {
+    color: #737a76;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #eceeec;
+    border-bottom: 1px solid #eceeec;
+    padding: 17px 0;
+    margin-bottom: 20px;
+}
+
+.estadisticas div {
+    text-align: center;
+}
+
+.estadisticas div:not(:last-child) {
+    border-right: 1px solid #eceeec;
+}
+
+.estadisticas strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.estadisticas span {
+    display: block;
+    margin-top: 3px;
+    color: #8a908d;
+    font-size: 0.7rem;
+}
+
+.jugador-valor {
+    margin-bottom: 18px;
+}
+
+.jugador-valor span {
+    display: block;
+    color: #8a908d;
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+}
+
+.jugador-valor strong {
+    display: block;
+    font-size: 1.15rem;
+}
+
+.boton-perfil {
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    background-color: #111614;
+    color: white;
+    padding: 13px 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.boton-perfil:hover {
+    background-color: #65d46e;
+    color: #0b120d;
+}
+
+.club-card {
+    height: 100%;
+    background-color: #f8faf8;
+    border: 1px solid #e3e8e4;
+    border-radius: 16px;
+    padding: 28px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 16px 35px rgba(20, 30, 24, 0.10);
+}
+
+.club-escudo {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background-color: #111614;
+    color: #65d46e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.club-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.club-card p {
+    color: #777d79;
+    margin-bottom: 14px;
+}
+
+.club-jugadores {
+    display: block;
+    color: #474d49;
+    font-size: 0.85rem;
+    margin-bottom: 22px;
+}
+
+.boton-club {
+    width: 100%;
+    border: 1px solid #d8ded9;
+    border-radius: 9px;
+    background-color: white;
+    padding: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.boton-club:hover {
+    background-color: #111614;
+    color: white;
+    border-color: #111614;
+}
+
+.controles-calendario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.controles-calendario span {
+    min-width: 130px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.controles-calendario button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d6ddd8;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.controles-calendario button:hover {
+    background-color: #111614;
+    color: white;
+}
+
+.calendario-wrapper {
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.calendario-semanal {
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: white;
+    border: 1px solid #dfe4e1;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.dia-calendario {
+    min-height: 270px;
+    border-right: 1px solid #e2e6e3;
+}
+
+.dia-calendario:last-child {
+    border-right: none;
+}
+
+.dia-header {
+    padding: 18px;
+    border-bottom: 1px solid #e2e6e3;
+    background-color: #fafbfa;
+}
+
+.dia-header span {
+    display: block;
+    color: #858c88;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.dia-header strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 1.45rem;
+}
+
+.dia-contenido {
+    padding: 12px;
+}
+
+.partido-card {
+    background-color: #edf8ee;
+    border-left: 4px solid #65d46e;
+    border-radius: 8px;
+    padding: 13px;
+}
+
+.partido-card.destacado {
+    background-color: #111614;
+    color: white;
+    border-left-color: #65d46e;
+}
+
+.partido-hora {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #4dad56;
+    margin-bottom: 8px;
+}
+
+.partido-card.destacado .partido-hora {
+    color: #65d46e;
+}
+
+.partido-card strong {
+    display: block;
+    font-size: 0.84rem;
+}
+
+.versus {
+    display: block;
+    color: #8a908d;
+    font-size: 0.7rem;
+    margin: 4px 0;
+}
+
+.sin-partidos {
+    color: #a1a6a3;
+    font-size: 0.78rem;
+}
+
+.seccion-pruebas {
+    background-color: #ffffff;
+}
+
+.prueba-card {
+    height: 100%;
+    background-color: #f8faf8;
+    border: 1px solid #e1e7e2;
+    border-radius: 16px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.prueba-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 18px 40px rgba(20, 30, 24, 0.10);
+}
+
+.prueba-club {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e3e7e4;
+}
+
+.prueba-escudo {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 14px;
+    background-color: #111614;
+    color: #65d46e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.prueba-club h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0 0 3px;
+}
+
+.prueba-club span {
+    color: #48ac52;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.prueba-descripcion {
+    color: #676e6a;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.prueba-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.prueba-detalles div {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #5f6662;
+    font-size: 0.83rem;
+}
+
+.prueba-detalles i {
+    color: #4db357;
+    font-size: 1rem;
+}
+
+.aviso-fecha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #edf8ee;
+    color: #4f6253;
+    border-radius: 9px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    font-size: 0.78rem;
+}
+
+.aviso-fecha i {
+    color: #48ad53;
+    font-size: 1rem;
+}
+
+.boton-notificar {
+    width: 100%;
+    margin-top: auto;
+    border: none;
+    border-radius: 9px;
+    background-color: #111614;
+    color: white;
+    padding: 13px 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.boton-notificar:hover {
+    background-color: #65d46e;
+    color: #0b120d;
+}
+
+.boton-notificar.activo {
+    background-color: #65d46e;
+    color: #0b120d;
+}
+
+.footer-principal {
+    background-color: #0f1311;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-principal h4 {
+    font-weight: 800;
+}
+
+.footer-principal p {
+    margin: 5px 0 0;
+    color: #929995;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+
+    .hero-principal {
+        min-height: 520px;
+        text-align: center;
+        background-position: center;
+    }
+
+    .hero-principal h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero-principal p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buscador-jugadores {
+        margin: 0 auto;
+    }
+
+    .encabezado-seccion,
+    .encabezado-calendario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .jugador-imagen {
+        height: 350px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-principal {
+        min-height: 560px;
+    }
+
+    .hero-principal h1 {
+        font-size: 2.5rem;
+    }
+
+    .buscador-jugadores {
+        flex-wrap: wrap;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .buscador-jugadores i {
+        display: none;
+    }
+
+    .buscador-jugadores input {
+        flex-basis: 100%;
+        width: 100%;
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    .buscador-jugadores button {
+        width: 100%;
+    }
+
+    .seccion-jugadores,
+    .seccion-clubes,
+    .seccion-partidos,
+    .seccion-pruebas {
+        padding: 55px 0;
+    }
+
+    .encabezado-seccion h2,
+    .encabezado-calendario h2 {
+        font-size: 1.8rem;
+    }
+
+    .jugador-imagen {
+        height: 320px;
+    }
+
+    .club-card {
+        padding: 24px;
+    }
+
+    .prueba-card {
+        padding: 22px;
+    }
+
+    .prueba-escudo {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+    }
+
+}

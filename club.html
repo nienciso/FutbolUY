@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Club | Player UY</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/club.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="bi bi-dribbble"></i>
+                    Player UY
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#jugadores">
+                                Jugadores
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html#clubes">
+                                Clubes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#partidos">
+                                Partidos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#pruebas">
+                                Próximas pruebas
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="club-principal">
+
+            <div class="container">
+
+                <a href="index.html#clubes" class="volver-clubes">
+
+                    <i class="bi bi-arrow-left"></i>
+
+                    Volver a clubes
+
+                </a>
+
+                <div class="club-cabecera">
+
+                    <div
+                        id="clubEscudo"
+                        class="club-escudo-grande">
+
+                        CAP
+
+                    </div>
+
+                    <div class="club-cabecera-info">
+
+                        <span class="club-etiqueta">
+                            CLUB DEL FÚTBOL URUGUAYO
+                        </span>
+
+                        <h1 id="clubNombre">
+                            Club
+                        </h1>
+
+                        <p
+                            id="clubUbicacion"
+                            class="club-ubicacion">
+
+                            Montevideo · Uruguay
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row g-4 mt-2">
+
+                    <div class="col-lg-8">
+
+                        <div class="club-descripcion">
+
+                            <span class="subtitulo">
+                                SOBRE EL CLUB
+                            </span>
+
+                            <h2>
+                                Perfil institucional
+                            </h2>
+
+                            <p id="clubDescripcion">
+                                Descripción del club.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="club-resumen">
+
+                            <div>
+
+                                <span>
+                                    Categoría
+                                </span>
+
+                                <strong id="clubCategoria">
+                                    Primera División
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Jugadores registrados
+                                </span>
+
+                                <strong id="clubCantidadJugadores">
+                                    0
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Departamento
+                                </span>
+
+                                <strong id="clubDepartamento">
+                                    Montevideo
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-plantel">
+
+            <div class="container">
+
+                <div class="encabezado-club-seccion">
+
+                    <span class="subtitulo">
+                        PLANTEL
+                    </span>
+
+                    <h2>
+                        Jugadores principales
+                    </h2>
+
+                    <p>
+                        Algunos de los jugadores destacados del plantel principal.
+                    </p>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="jugadoresPrincipales">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-reserva">
+
+            <div class="container">
+
+                <div class="encabezado-club-seccion">
+
+                    <span class="subtitulo">
+                        RESERVA
+                    </span>
+
+                    <h2>
+                        Jugadores de reserva
+                    </h2>
+
+                    <p>
+                        Jóvenes futbolistas que integran la reserva del club.
+                    </p>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="jugadoresReserva">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-partidos-club">
+
+            <div class="container">
+
+                <div class="encabezado-club-seccion">
+
+                    <span class="subtitulo">
+                        AGENDA
+                    </span>
+
+                    <h2>
+                        Próximos partidos
+                    </h2>
+
+                    <p>
+                        Próximos encuentros programados para el club.
+                    </p>
+
+                </div>
+
+                <div
+                    class="partidos-club-lista"
+                    id="partidosClub">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-pruebas-club">
+
+            <div class="container">
+
+                <div class="encabezado-club-seccion">
+
+                    <span class="subtitulo">
+                        OPORTUNIDADES
+                    </span>
+
+                    <h2>
+                        Próximas pruebas
+                    </h2>
+
+                    <p>
+                        Información sobre futuras jornadas de captación del club.
+                    </p>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="pruebasClub">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer-principal">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <h4>
+                        Player UY
+                    </h4>
+
+                    <p>
+                        Jugadores, clubes y partidos del fútbol uruguayo.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 text-md-end">
+
+                    <p>
+                        © 2026 Player UY
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/club.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

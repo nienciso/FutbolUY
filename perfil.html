@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil del jugador | Player UY</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="bi bi-dribbble"></i>
+                    Player UY
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#jugadores">
+                                Jugadores
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#clubes">
+                                Clubes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#partidos">
+                                Partidos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#pruebas">
+                                Próximas pruebas
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="perfil-principal">
+
+            <div class="container">
+
+                <a href="index.html#jugadores" class="volver-jugadores">
+
+                    <i class="bi bi-arrow-left"></i>
+
+                    Volver a jugadores
+
+                </a>
+
+                <div class="row g-5 align-items-start">
+
+                    <div class="col-lg-5">
+
+                        <div class="perfil-imagen-principal">
+
+                            <img
+                                id="perfilImagen"
+                                src=""
+                                alt="Jugador">
+
+                            <span
+                                id="perfilPosicion"
+                                class="perfil-posicion">
+
+                                Posición
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7">
+
+                        <span class="perfil-etiqueta">
+                            PERFIL DEL JUGADOR
+                        </span>
+
+                        <h1 id="perfilNombre">
+                            Jugador
+                        </h1>
+
+                        <p id="perfilResumen" class="perfil-resumen">
+                            Uruguay
+                        </p>
+
+                        <div class="perfil-estadisticas">
+
+                            <div>
+
+                                <strong id="perfilPartidos">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Partidos
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong id="perfilGoles">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Goles
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong id="perfilAsistencias">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Asistencias
+                                </span>
+
+                            </div>
+
+                            <div>
+
+                                <strong id="perfilMinutos">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Minutos
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="datos-jugador">
+
+                            <div class="dato-perfil">
+
+                                <span>
+                                    Edad
+                                </span>
+
+                                <strong id="perfilEdad">
+                                    -
+                                </strong>
+
+                            </div>
+
+                            <div class="dato-perfil">
+
+                                <span>
+                                    Departamento
+                                </span>
+
+                                <strong id="perfilDepartamento">
+                                    -
+                                </strong>
+
+                            </div>
+
+                            <div class="dato-perfil">
+
+                                <span>
+                                    Altura
+                                </span>
+
+                                <strong id="perfilAltura">
+                                    -
+                                </strong>
+
+                            </div>
+
+                            <div class="dato-perfil">
+
+                                <span>
+                                    Peso
+                                </span>
+
+                                <strong id="perfilPeso">
+                                    -
+                                </strong>
+
+                            </div>
+
+                            <div class="dato-perfil">
+
+                                <span>
+                                    Pie hábil
+                                </span>
+
+                                <strong id="perfilPie">
+                                    -
+                                </strong>
+
+                            </div>
+
+                            <div class="dato-perfil">
+
+                                <span>
+                                    Club actual
+                                </span>
+
+                                <strong id="perfilClub">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="perfil-valor">
+
+                            <span>
+                                Valor estimado
+                            </span>
+
+                            <strong id="perfilValor">
+                                USD 0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-trayectoria">
+
+            <div class="container">
+
+                <div class="encabezado-perfil-seccion">
+
+                    <span class="subtitulo">
+                        TRAYECTORIA
+                    </span>
+
+                    <h2>
+                        Historial deportivo
+                    </h2>
+
+                    <p>
+                        Clubes y categorías en las que participó el jugador
+                        durante su formación y carrera deportiva.
+                    </p>
+
+                </div>
+
+                <div
+                    class="trayectoria-lista"
+                    id="trayectoriaJugador">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-galeria">
+
+            <div class="container">
+
+                <div class="encabezado-perfil-seccion">
+
+                    <span class="subtitulo">
+                        MULTIMEDIA
+                    </span>
+
+                    <h2>
+                        Galería
+                    </h2>
+
+                    <p>
+                        Imágenes del jugador en entrenamientos y partidos.
+                    </p>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="galeriaJugador">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-videos">
+
+            <div class="container">
+
+                <div class="encabezado-perfil-seccion">
+
+                    <span class="subtitulo">
+                        VIDEOS
+                    </span>
+
+                    <h2>
+                        Videos destacados
+                    </h2>
+
+                    <p>
+                        Jugadas, goles y momentos destacados.
+                    </p>
+
+                </div>
+
+                <div
+                    class="row g-4"
+                    id="videosJugador">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer-principal">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <h4>
+                        Player UY
+                    </h4>
+
+                    <p>
+                        Jugadores, clubes y partidos del fútbol uruguayo.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 text-md-end">
+
+                    <p>
+                        © 2026 Player UY
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/perfil.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

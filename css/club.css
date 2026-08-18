@@ -1,0 +1,393 @@
+.club-principal {
+    padding: 55px 0 80px;
+    background-color: #f5f7f6;
+}
+
+.volver-clubes {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #555d58;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+    transition: 0.2s ease;
+}
+
+.volver-clubes:hover {
+    color: #3ca947;
+}
+
+.club-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 45px;
+}
+
+.club-escudo-grande {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 26px;
+    background-color: #111614;
+    color: #65d46e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    box-shadow:
+        0 16px 35px rgba(20, 30, 24, 0.12);
+}
+
+.club-etiqueta {
+    display: inline-block;
+    color: #47ad51;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 8px;
+}
+
+.club-cabecera-info h1 {
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.club-ubicacion {
+    color: #707773;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.club-descripcion {
+    background-color: white;
+    border: 1px solid #e2e7e3;
+    border-radius: 16px;
+    padding: 28px;
+    height: 100%;
+}
+
+.club-descripcion h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.club-descripcion p {
+    color: #666e69;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.club-resumen {
+    height: 100%;
+    background-color: #111614;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.club-resumen div {
+    padding: 22px 24px;
+}
+
+.club-resumen div:not(:last-child) {
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.club-resumen span {
+    display: block;
+    color: #aeb6b1;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+.club-resumen strong {
+    font-size: 1rem;
+}
+
+.seccion-plantel,
+.seccion-reserva,
+.seccion-partidos-club,
+.seccion-pruebas-club {
+    padding: 80px 0;
+}
+
+.seccion-plantel {
+    background-color: white;
+}
+
+.seccion-reserva {
+    background-color: #eef2ef;
+}
+
+.seccion-partidos-club {
+    background-color: white;
+}
+
+.seccion-pruebas-club {
+    background-color: #eef2ef;
+}
+
+.encabezado-club-seccion {
+    margin-bottom: 40px;
+}
+
+.encabezado-club-seccion h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.encabezado-club-seccion p {
+    color: #777d79;
+    margin: 0;
+    max-width: 700px;
+}
+
+.jugador-club-card {
+    height: 100%;
+    background-color: #f8faf8;
+    border: 1px solid #e2e7e3;
+    border-radius: 16px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.jugador-club-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 18px 40px rgba(20, 30, 24, 0.10);
+}
+
+.jugador-club-imagen {
+    height: 250px;
+    overflow: hidden;
+    background-color: #dfe4e1;
+}
+
+.jugador-club-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.jugador-club-card:hover .jugador-club-imagen img {
+    transform: scale(1.04);
+}
+
+.jugador-club-info {
+    padding: 22px;
+}
+
+.jugador-club-info h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.jugador-club-info p {
+    color: #777e79;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+}
+
+.boton-ver-perfil {
+    width: 100%;
+    border-radius: 9px;
+    background-color: #111614;
+    color: white;
+    padding: 12px 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.25s ease;
+}
+
+.boton-ver-perfil:hover {
+    background-color: #65d46e;
+    color: #0b120d;
+}
+
+.partidos-club-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.partido-club-card {
+    display: grid;
+    grid-template-columns: 120px 1fr 100px 1fr;
+    align-items: center;
+    gap: 20px;
+    background-color: #f8faf8;
+    border: 1px solid #e2e7e3;
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: 0.25s ease;
+}
+
+.partido-club-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 28px rgba(20, 30, 24, 0.07);
+}
+
+.partido-club-fecha {
+    color: #4bad55;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.partido-club-equipo {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.partido-club-vs {
+    text-align: center;
+    color: #8a918c;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.partido-club-hora {
+    display: block;
+    color: #6f7772;
+    font-size: 0.78rem;
+    margin-top: 4px;
+}
+
+.prueba-club-card {
+    height: 100%;
+    background-color: white;
+    border: 1px solid #dde4df;
+    border-radius: 16px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.prueba-club-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 16px 35px rgba(20, 30, 24, 0.09);
+}
+
+.prueba-club-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.prueba-club-dato {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #656d68;
+    font-size: 0.85rem;
+    margin-bottom: 11px;
+}
+
+.prueba-club-dato i {
+    color: #4bad55;
+}
+
+.prueba-club-aviso {
+    background-color: #edf8ee;
+    border-radius: 9px;
+    padding: 12px 14px;
+    color: #55645a;
+    font-size: 0.8rem;
+    margin: 12px 0 18px;
+}
+
+.boton-notificar-club {
+    width: 100%;
+    margin-top: auto;
+    border: none;
+    border-radius: 9px;
+    background-color: #111614;
+    color: white;
+    padding: 13px 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s ease;
+}
+
+.boton-notificar-club:hover,
+.boton-notificar-club.activo {
+    background-color: #65d46e;
+    color: #0b120d;
+}
+
+@media (max-width: 768px) {
+
+    .club-cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .club-cabecera-info h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .partido-club-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .partido-club-vs {
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .club-principal {
+        padding: 35px 0 55px;
+    }
+
+    .club-escudo-grande {
+        width: 95px;
+        height: 95px;
+        min-width: 95px;
+        border-radius: 20px;
+    }
+
+    .seccion-plantel,
+    .seccion-reserva,
+    .seccion-partidos-club,
+    .seccion-pruebas-club {
+        padding: 55px 0;
+    }
+
+    .encabezado-club-seccion h2 {
+        font-size: 1.8rem;
+    }
+
+    .jugador-club-imagen {
+        height: 300px;
+    }
+
+}
